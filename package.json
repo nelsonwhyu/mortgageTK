@@ -1,0 +1,28 @@
+{
+  "name": "mortgagetk",
+  "version": "1.0.0",
+  "description": "Mortgage Calculations with Personal Finance Support",
+  "main": "./dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nelsonwhyu/mortgageTK.git"
+  },
+  "keywords": [
+    "Real",
+    "Estate",
+    "Mortgage",
+    "Home"
+  ],
+  "author": "Nelson Yu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nelsonwhyu/mortgageTK/issues"
+  },
+  "homepage": "https://github.com/nelsonwhyu/mortgageTK#readme",
+  "devDependencies": {
+    "@types/node": "^14.14.28"
+  }
+}
