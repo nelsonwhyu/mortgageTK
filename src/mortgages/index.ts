@@ -1,0 +1,1 @@
+export { calculateMortgagePayment } from './calculations/mortgage-payment';

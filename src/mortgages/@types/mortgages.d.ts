@@ -12,7 +12,6 @@ interface MortgagePayments{
     periodicPaymentProgression: number[];
     totalInterest: number;
     interestToPrincipalRatio: number;
-    annualPercentRate: number;
     amortizationTable: AmortizedPeriodicFlow[];
 }
 

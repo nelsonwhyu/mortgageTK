@@ -33,27 +33,25 @@ export const amortizeLifePayments = ( mortgage: Mortgage ): AmortizedPeriodicFlo
                 paymentFreqPerYear,
                 periodBeginningBalance: ( lifeAmortizationTable.length === 0) 
                     ? loanAmount 
-                    :lifeAmortizationTable[lifeAmortizationTable.length-1].periodEndingBalance,
+                    : lifeAmortizationTable[lifeAmortizationTable.length-1].periodEndingBalance,
                 interestOnly: (periodsPast < initialRateMonths) ? interestOnly : false
             }
             const periodicAmortizationTable: AmortizedPeriodicFlow[] = amortizePeriodicPayments(amortizationContext);
             lifeAmortizationTable.push(...periodicAmortizationTable)
         }
         return lifeAmortizationTable;
+    } 
 
-    } else {
-        const amortizationContext: AmortizationContext = {
-            periodBeginningBalance: loanAmount,
-            interestRate: interestRate,
-            loanLifeInMonths,
-            periodsCount: loanLifeInMonths,
-            startingPeriod: 1,
-            paymentFreqPerYear,
-            interestOnly
-        }
-        return ( amortizePeriodicPayments(amortizationContext) );
+    const amortizationContext: AmortizationContext = {
+        periodBeginningBalance: loanAmount,
+        interestRate: interestRate,
+        loanLifeInMonths,
+        periodsCount: loanLifeInMonths,
+        startingPeriod: 1,
+        paymentFreqPerYear,
+        interestOnly
     }
-
+    return ( amortizePeriodicPayments(amortizationContext) );
 }; 
 
 const computeRateProgression = ( rateAdjustmentContext: 
@@ -106,12 +104,3 @@ const computeRateProgression = ( rateAdjustmentContext:
         )
     );
 }
-
-
-const testingMortgage: Mortgage = {
-    loanAmount: 320800,
-    interestRate: 0.03125,
-    mortgageProgram: "5_1_ARM"
-}
-
-console.log(amortizeLifePayments(testingMortgage)[359]);
