@@ -3,8 +3,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.amortizeLifePayments = void 0;
 const mortgage_program_config_1 = require("../mortgage-program-config");
 const amortize_periodic_payments_1 = require("./amortize-periodic-payments");
-const amortizeLifePayments = (mortgage) => {
-    const { loanAmount, interestRate, mortgageProgram } = mortgage;
+const amortizeLifePayments = (mortgageInput) => {
+    const { loanAmount, interestRate, mortgageProgram } = mortgageInput;
     const { loanLifeInMonths, adjustFreq, paymentFreqPerYear, benchMark, capStructure, floor, initialRateMonths, interestOnly } = mortgage_program_config_1.mortgageProgramConfig[mortgageProgram];
     if (initialRateMonths) {
         const rateProgression = computeRateProgression({ interestRate, loanLifeInMonths, initialRateMonths, adjustFreq, capStructure });
@@ -12,7 +12,7 @@ const amortizeLifePayments = (mortgage) => {
         for (let adj of rateProgression) {
             const periodsPast = (lifeAmortizationTable.length === 0) ? 0 : Math.max(...lifeAmortizationTable.map(period => period.period));
             const amortizationContext = {
-                startingPeriod: (lifeAmortizationTable.length === 0) ? 1 : Math.max(...lifeAmortizationTable.map(period => period.period)) + 1,
+                startingPeriod: (lifeAmortizationTable.length === 0) ? 1 : periodsPast + 1,
                 interestRate: adj.rate,
                 loanLifeInMonths: (lifeAmortizationTable.length === 0) ? loanLifeInMonths : loanLifeInMonths - periodsPast,
                 periodsCount: adj.periodsCount,
@@ -27,18 +27,16 @@ const amortizeLifePayments = (mortgage) => {
         }
         return lifeAmortizationTable;
     }
-    else {
-        const amortizationContext = {
-            periodBeginningBalance: loanAmount,
-            interestRate: interestRate,
-            loanLifeInMonths,
-            periodsCount: loanLifeInMonths,
-            startingPeriod: 1,
-            paymentFreqPerYear,
-            interestOnly
-        };
-        return (amortize_periodic_payments_1.amortizePeriodicPayments(amortizationContext));
-    }
+    const amortizationContext = {
+        periodBeginningBalance: loanAmount,
+        interestRate: interestRate,
+        loanLifeInMonths,
+        periodsCount: loanLifeInMonths,
+        startingPeriod: 1,
+        paymentFreqPerYear,
+        interestOnly
+    };
+    return (amortize_periodic_payments_1.amortizePeriodicPayments(amortizationContext));
 };
 exports.amortizeLifePayments = amortizeLifePayments;
 const computeRateProgression = (rateAdjustmentContext) => {
@@ -69,10 +67,4 @@ const computeRateProgression = (rateAdjustmentContext) => {
         periodsCount: adj.periodsCount
     })));
 };
-const testingMortgage = {
-    loanAmount: 320800,
-    interestRate: 0.03125,
-    mortgageProgram: "5_1_ARM"
-};
-console.log(exports.amortizeLifePayments(testingMortgage)[359]);
 //# sourceMappingURL=amortize-life-payments.js.map

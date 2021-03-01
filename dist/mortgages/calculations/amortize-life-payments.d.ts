@@ -1,1 +1,1 @@
-export declare const amortizeLifePayments: (mortgage: Mortgage) => AmortizedPeriodicFlow[];
+export declare const amortizeLifePayments: (mortgageInput: MortgageInput) => AmortizedPeriodicFlow[];

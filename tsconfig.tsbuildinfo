@@ -161,20 +161,10 @@
         "signature": "89bf2b7a601b73ea4311eda9c41f86a58994fec1bee3b87c4a14d68d9adcdcbd",
         "affectsGlobalScope": true
       },
-      "./src/index.ts": {
-        "version": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-        "signature": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-        "affectsGlobalScope": false
-      },
       "./src/mortgages/mortgage-program-config.ts": {
         "version": "21009d084a8bcb670df3ede456febab6a678707ac13172d099d69cdca816ad18",
         "signature": "0d753d05cb5c9f41671556feca5959f6d5ae754027af83f8bc4c5c687d2cb975",
         "affectsGlobalScope": false
-      },
-      "./src/mortgages/@types/mortgages.d.ts": {
-        "version": "3df3a88c2065a5c6e130b8c4f0ed2f3a9ab994f2381c5421113c9c4eac5377b1",
-        "signature": "3df3a88c2065a5c6e130b8c4f0ed2f3a9ab994f2381c5421113c9c4eac5377b1",
-        "affectsGlobalScope": true
       },
       "./src/mortgages/calculations/calculate-periodic-payment.ts": {
         "version": "ad6704607febdc367ef20860947fcf9615e698f53b24a8c6a12b28df050fe97d",
@@ -187,14 +177,59 @@
         "affectsGlobalScope": false
       },
       "./src/mortgages/calculations/amortize-life-payments.ts": {
-        "version": "5293821009d7b6f95f6fe5cbdb536c6a7bea500e81ebcf70a3e1039b7245aaa8",
-        "signature": "b584623dc8f30df762a4785e1e4b11a6538e0693f32ea1aba9706410215592fd",
+        "version": "5e45a16c0240b04ba58dc62a0c07b70f23f134cd8e7d3a3c3f7b893551c65394",
+        "signature": "dd0b2ef3dc4e800e6b27b2e191a552ae590efa5e2e5f848e57e40a3a1fe996fa",
         "affectsGlobalScope": false
       },
       "./src/mortgages/calculations/mortgage-payment.ts": {
-        "version": "057874d170eaca26ad29152ade80cc81c156486c4843521a8f325cad0fffbf44",
+        "version": "4e46cb6c4bb9c57fe67526eac3dbc39c6c6c169c5067a8216b137e497c911e61",
+        "signature": "e034bb3790edc6bc01d3a95f7c4e178dd1be82f04090f223830ba3b438aa259e",
+        "affectsGlobalScope": false
+      },
+      "./src/mortgages/index.ts": {
+        "version": "282252e85587382aeb34627d2931a1c5826cf8613734b092daf1e881442b84bc",
+        "signature": "dd9b89b1e1386a939104bb0169faf76bc325582206814c38a48a8058cd9ffb6e",
+        "affectsGlobalScope": false
+      },
+      "./src/properties/index.ts": {
+        "version": "6956f5aa9e1700e56a56bf89b3cf6d5664d7edb2d4700f90048e1101d62488a9",
+        "signature": "faff4905ada401f9aa1d540e12c88187ebf0a8c0fe04d7e25412953ab50a8f5b",
+        "affectsGlobalScope": false
+      },
+      "./src/investors/index.ts": {
+        "version": "7f6c439b33207febd2e653b07b8d9389ff5c76201af8f1a85ee9c6f7f79cc0e5",
+        "signature": "a7c9bcb17368a40894b258abdd19e475b2254fef5877e432b571f5a26ed22cf9",
+        "affectsGlobalScope": false
+      },
+      "./src/index.ts": {
+        "version": "c7fa8cb76a044856da8dd9970657968891b413a8fc1b951a78b337e036a71627",
+        "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6",
+        "affectsGlobalScope": false
+      },
+      "./src/deals/index.ts": {
+        "version": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "signature": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "affectsGlobalScope": false
+      },
+      "./src/deals/@types/deals.d.ts": {
+        "version": "bccde4f643f911c55abb38ee8646d8c695dfdc90a1f8c70546e6c661018c7586",
+        "signature": "bccde4f643f911c55abb38ee8646d8c695dfdc90a1f8c70546e6c661018c7586",
+        "affectsGlobalScope": true
+      },
+      "./src/investors/@types/investors.d.ts": {
+        "version": "1845608a2631ad6dc8a3c69706e9cecb22ed170d97790780fbb8d3a55c321b5c",
+        "signature": "1845608a2631ad6dc8a3c69706e9cecb22ed170d97790780fbb8d3a55c321b5c",
+        "affectsGlobalScope": true
+      },
+      "./src/mortgages/@types/mortgages.d.ts": {
+        "version": "205ff2c6545ccb7154b1cf6b62c9b6043be719739d42aceda32054b01d7655b9",
+        "signature": "205ff2c6545ccb7154b1cf6b62c9b6043be719739d42aceda32054b01d7655b9",
+        "affectsGlobalScope": true
+      },
+      "./src/properties/@types/properties.d.ts": {
+        "version": "3e631130a161440559c1e848ef83998ae8b62148da089991aa14e6b3cafe71d3",
+        "signature": "3e631130a161440559c1e848ef83998ae8b62148da089991aa14e6b3cafe71d3",
+        "affectsGlobalScope": true
       },
       "./node_modules/@types/node/globals.d.ts": {
         "version": "215d8d9a2c480fd460127edc048d68d9931d3b27f95132253a6e71975f060bb1",
@@ -747,13 +782,24 @@
         "./node_modules/@types/node/stream.d.ts",
         "./node_modules/@types/node/zlib.d.ts"
       ],
+      "./src/index.ts": [
+        "./src/investors/index.ts",
+        "./src/mortgages/index.ts",
+        "./src/properties/index.ts"
+      ],
       "./src/mortgages/calculations/amortize-life-payments.ts": [
         "./src/mortgages/calculations/amortize-periodic-payments.ts",
-        "./src/mortgages/calculations/calculate-periodic-payment.ts",
         "./src/mortgages/mortgage-program-config.ts"
       ],
       "./src/mortgages/calculations/amortize-periodic-payments.ts": [
         "./src/mortgages/calculations/calculate-periodic-payment.ts"
+      ],
+      "./src/mortgages/calculations/mortgage-payment.ts": [
+        "./src/mortgages/calculations/amortize-life-payments.ts",
+        "./src/mortgages/mortgage-program-config.ts"
+      ],
+      "./src/mortgages/index.ts": [
+        "./src/mortgages/calculations/mortgage-payment.ts"
       ],
       "../../../node_modules/@types/hoist-non-react-statics/index.d.ts": [
         "../../../node_modules/@types/react/index.d.ts"
@@ -1123,13 +1169,20 @@
       "./node_modules/@types/node/wasi.d.ts",
       "./node_modules/@types/node/worker_threads.d.ts",
       "./node_modules/@types/node/zlib.d.ts",
+      "./src/deals/@types/deals.d.ts",
+      "./src/deals/index.ts",
       "./src/index.ts",
+      "./src/investors/@types/investors.d.ts",
+      "./src/investors/index.ts",
       "./src/mortgages/@types/mortgages.d.ts",
       "./src/mortgages/calculations/amortize-life-payments.ts",
       "./src/mortgages/calculations/amortize-periodic-payments.ts",
       "./src/mortgages/calculations/calculate-periodic-payment.ts",
       "./src/mortgages/calculations/mortgage-payment.ts",
+      "./src/mortgages/index.ts",
       "./src/mortgages/mortgage-program-config.ts",
+      "./src/properties/@types/properties.d.ts",
+      "./src/properties/index.ts",
       "../../../node_modules/@types/hoist-non-react-statics/index.d.ts",
       "../../../node_modules/@types/prop-types/index.d.ts",
       "../../../node_modules/@types/react-native/batchedbridge.d.ts",
