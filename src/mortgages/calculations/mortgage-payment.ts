@@ -1,17 +1,16 @@
 import { amortizeLifePayments } from './amortize-life-payments'
 import { mortgageProgramConfig } from '../mortgage-program-config'
-import { setupMaster } from 'cluster';
 
-export const calculateMortgagePayment = ( mortgage: Mortgage): MortgagePayments => {
+export const calculateMortgagePayment = ( mortgageInput: MortgageInput): MortgagePayments => {
     
-    const amortizationTable: AmortizedPeriodicFlow[] = amortizeLifePayments(mortgage);
-    const mortgageProgram: string = mortgage.mortgageProgram;
+    const amortizationTable: AmortizedPeriodicFlow[] = amortizeLifePayments(mortgageInput);
+    const mortgageProgram: string = mortgageInput.mortgageProgram;
     const initialRateMonths: number | null = mortgageProgramConfig[mortgageProgram].initialRateMonths;
     const rateProgression: number[] = amortizationTable.map(period => period.rate);
     const periodicPaymentProgression: number[] = amortizationTable.map(period => period.payment);
     const periodicInterestProgression: number[] = amortizationTable.map(period => period.interest);
     const totalInterest: number = periodicInterestProgression.reduce( (acc, curr) => acc + curr )
-    const loanAmount: number = mortgage.loanAmount;
+    const loanAmount: number = mortgageInput.loanAmount;
     
     return(
         {
@@ -26,11 +25,3 @@ export const calculateMortgagePayment = ( mortgage: Mortgage): MortgagePayments 
         }
     )
 }
-
-const testingMortgage: Mortgage = {
-    loanAmount: 320800,
-    interestRate: 0.03125,
-    mortgageProgram: "10_1_InterestOnly"
-}
-
-console.log(calculateMortgagePayment(testingMortgage));

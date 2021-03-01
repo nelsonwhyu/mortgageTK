@@ -1,14 +1,13 @@
 import { mortgageProgramConfig } from '../mortgage-program-config';
 import { amortizePeriodicPayments, AmortizationContext } from './amortize-periodic-payments';
-import { calculatePeriodicPayments, PaymentsContext } from './calculate-periodic-payment';
 
 interface RateAdjustment {
     rate: number,
     periodsCount: number
 }
 
-export const amortizeLifePayments = ( mortgage: Mortgage ): AmortizedPeriodicFlow[] => {
-    const { loanAmount, interestRate, mortgageProgram } = mortgage;
+export const amortizeLifePayments = ( mortgageInput: MortgageInput ): AmortizedPeriodicFlow[] => {
+    const { loanAmount, interestRate, mortgageProgram } = mortgageInput;
     const { 
         loanLifeInMonths, 
         adjustFreq, 
@@ -26,7 +25,7 @@ export const amortizeLifePayments = ( mortgage: Mortgage ): AmortizedPeriodicFlo
         for (let adj of rateProgression){
             const periodsPast: number = ( lifeAmortizationTable.length === 0) ? 0 : Math.max(...lifeAmortizationTable.map( period => period.period));
             const amortizationContext: AmortizationContext = {
-                startingPeriod: ( lifeAmortizationTable.length === 0) ? 1 : Math.max(...lifeAmortizationTable.map( period => period.period )) + 1,
+                startingPeriod: ( lifeAmortizationTable.length === 0) ? 1 : periodsPast + 1,
                 interestRate: adj.rate,
                 loanLifeInMonths: ( lifeAmortizationTable.length === 0) ? loanLifeInMonths : loanLifeInMonths - periodsPast ,
                 periodsCount: adj.periodsCount,

@@ -1,4 +1,6 @@
-interface Mortgage{
+interface Mortgage extends MortgageInput, MortgagePayments{};
+
+interface MortgageInput{
     loanAmount: number;
     interestRate: number;
     mortgageProgram: MortgageProgram;
