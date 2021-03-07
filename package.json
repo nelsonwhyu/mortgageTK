@@ -4,7 +4,10 @@
   "description": "Mortgage Calculations with Personal Finance Support",
   "main": "./dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "lint": "eslint . --ext .ts",
+    "coverage": "jest --coverage",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
@@ -23,6 +26,9 @@
   },
   "homepage": "https://github.com/nelsonwhyu/mortgageTK#readme",
   "devDependencies": {
-    "@types/node": "^14.14.28"
+    "@types/node": "^14.14.28",
+    "@typescript-eslint/eslint-plugin": "^4.16.1",
+    "@typescript-eslint/parser": "^4.16.1",
+    "eslint": "^7.21.0"
   }
 }

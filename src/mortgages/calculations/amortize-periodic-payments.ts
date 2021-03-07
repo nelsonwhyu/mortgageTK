@@ -40,7 +40,7 @@ export const amortizePeriodicPayments = ( amortizationContext: AmortizationConte
 
     const amortizationTable: AmortizedPeriodicFlow[] = [beginningAmortizedPeriodicFlow];
 
-    for (let i: number = 1; i < periodsCount ; i++ ){
+    for (let i = 1; i < periodsCount ; i++ ){
         const beginningAmortizedFlow: AmortizedPeriodicFlow = amortizationTable[amortizationTable.length-1];
         const period: number = beginningAmortizedFlow.period + 1
         const beginningBalance: number = beginningAmortizedFlow.periodEndingBalance;

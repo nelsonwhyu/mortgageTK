@@ -5,11 +5,11 @@ const mortgage_program_config_1 = require("../mortgage-program-config");
 const amortize_periodic_payments_1 = require("./amortize-periodic-payments");
 const amortizeLifePayments = (mortgageInput) => {
     const { loanAmount, interestRate, mortgageProgram } = mortgageInput;
-    const { loanLifeInMonths, adjustFreq, paymentFreqPerYear, benchMark, capStructure, floor, initialRateMonths, interestOnly } = mortgage_program_config_1.mortgageProgramConfig[mortgageProgram];
+    const { loanLifeInMonths, adjustFreq, paymentFreqPerYear, capStructure, initialRateMonths, interestOnly } = mortgage_program_config_1.mortgageProgramConfig[mortgageProgram];
     if (initialRateMonths) {
         const rateProgression = computeRateProgression({ interestRate, loanLifeInMonths, initialRateMonths, adjustFreq, capStructure });
         const lifeAmortizationTable = [];
-        for (let adj of rateProgression) {
+        for (const adj of rateProgression) {
             const periodsPast = (lifeAmortizationTable.length === 0) ? 0 : Math.max(...lifeAmortizationTable.map(period => period.period));
             const amortizationContext = {
                 startingPeriod: (lifeAmortizationTable.length === 0) ? 1 : periodsPast + 1,

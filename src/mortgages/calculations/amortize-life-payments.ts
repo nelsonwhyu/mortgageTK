@@ -12,9 +12,7 @@ export const amortizeLifePayments = ( mortgageInput: MortgageInput ): AmortizedP
         loanLifeInMonths, 
         adjustFreq, 
         paymentFreqPerYear, 
-        benchMark, 
         capStructure, 
-        floor, 
         initialRateMonths, 
         interestOnly 
     } = mortgageProgramConfig[mortgageProgram];
@@ -22,7 +20,7 @@ export const amortizeLifePayments = ( mortgageInput: MortgageInput ): AmortizedP
     if (initialRateMonths) {
         const rateProgression: RateAdjustment[] = computeRateProgression({interestRate, loanLifeInMonths, initialRateMonths, adjustFreq, capStructure});
         const lifeAmortizationTable: AmortizedPeriodicFlow[] = [];
-        for (let adj of rateProgression){
+        for (const adj of rateProgression){
             const periodsPast: number = ( lifeAmortizationTable.length === 0) ? 0 : Math.max(...lifeAmortizationTable.map( period => period.period));
             const amortizationContext: AmortizationContext = {
                 startingPeriod: ( lifeAmortizationTable.length === 0) ? 1 : periodsPast + 1,
