@@ -1,3 +1,3 @@
 # mortgageTK
 
-Mortgage Calculations with Personal Finance Support
+Mortgage Calculations Helpers. Details to follow.
