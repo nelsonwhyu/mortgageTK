@@ -1,5 +1,5 @@
 {
-  "name": "mortgagetk",
+  "name": "@nelsonwhyu/mortgagetk",
   "version": "1.0.0",
   "description": "Mortgage Calculations with Personal Finance Support",
   "main": "./dist/index.js",
@@ -11,7 +11,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nelsonwhyu/mortgageTK.git"
+    "url": "git+https://github.com/nelsonwhyu/mortgageTK.git",
+    "directory": "@nelsonwhyu/mortgageTK"
   },
   "keywords": [
     "Real",
@@ -30,5 +31,8 @@
     "@typescript-eslint/eslint-plugin": "^4.16.1",
     "@typescript-eslint/parser": "^4.16.1",
     "eslint": "^7.21.0"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/nelsonwhyu"
   }
 }
