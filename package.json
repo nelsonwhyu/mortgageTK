@@ -2,7 +2,7 @@
   "name": "@nelsonwhyu/mortgagetk",
   "version": "1.0.0",
   "description": "Mortgage Calculations with Personal Finance Support",
-  "main": "./dist/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "jest",
     "lint": "eslint . --ext .ts",
@@ -34,5 +34,6 @@
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/nelsonwhyu"
-  }
+  },
+  "types": "dist/index.d.ts"
 }

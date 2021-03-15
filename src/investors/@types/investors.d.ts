@@ -10,7 +10,6 @@ interface InvestorInput {
     taxRate: number;
     monthlyFixedExpense: number;
     monthlyVariableExpense: number;
-    properties: PropertyOwnerShip[];
     qualifiedMortgageRate: {
         [key in OccupancyType]?: {
             [key in MortgageProgram]?: {
