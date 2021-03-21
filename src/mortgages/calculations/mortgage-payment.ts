@@ -1,5 +1,6 @@
 import { amortizeLifePayments } from './amortize-life-payments'
 import { mortgageProgramConfig } from '../mortgage-program-config'
+import { MortgageInput, MortgagePayments, AmortizedPeriodicFlow} from '../index';
 
 export const calculateMortgagePayment = ( mortgageInput: MortgageInput): MortgagePayments => {
     

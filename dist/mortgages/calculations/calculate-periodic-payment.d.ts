@@ -6,3 +6,4 @@ export interface PaymentsContext {
     interestOnly: boolean;
 }
 export declare const calculatePeriodicPayments: (monthlyPaymentContext: PaymentsContext) => number;
+//# sourceMappingURL=calculate-periodic-payment.d.ts.map

@@ -1,4 +1,5 @@
 import { calculatePeriodicPayments } from './calculate-periodic-payment'
+import { AmortizedPeriodicFlow} from '../index';
 
 export interface AmortizationContext {
     startingPeriod: number;

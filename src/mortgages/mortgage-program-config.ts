@@ -1,3 +1,5 @@
+export type Indices = "10_Yr_Treasury" | "LIBOR" | "SOFR"
+
 export interface MortgageProgramProps{
     loanLifeInMonths: number;
     paymentFreqPerYear: number;

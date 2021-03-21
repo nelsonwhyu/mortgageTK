@@ -1,5 +1,6 @@
 import { mortgageProgramConfig } from '../mortgage-program-config';
 import { amortizePeriodicPayments, AmortizationContext } from './amortize-periodic-payments';
+import {MortgageInput, AmortizedPeriodicFlow} from '../index';
 
 interface RateAdjustment {
     rate: number,

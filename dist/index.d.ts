@@ -1,4 +1,5 @@
-export { createProperty } from './properties';
-export { createInvestor } from './investors';
-export { createDeal } from './deals';
-export { createMortgage } from './mortgages';
+export * from './properties';
+export * from './investors';
+export * from './deals';
+export * from './mortgages';
+//# sourceMappingURL=index.d.ts.map
