@@ -30,8 +30,7 @@ const createDeal = (dealInput) => {
         / mortgage.amortizationTable.length) * 100;
     const noIncomePaymentSurvivingMonths = postDealCash / postDealOverallFixedExpense;
     const noIncomeLifeSurvivingMonths = postDealCash / (postDealOverallFixedExpense + investor.monthlyVariableExpense);
-    return ({
-        mortgage,
+    return (Object.assign({ mortgage,
         downPayment,
         annualPercentRate,
         monthlyPropertyIncome,
@@ -43,8 +42,7 @@ const createDeal = (dealInput) => {
         postDealCash,
         postDealCashPerEscrowInMonths,
         noIncomePaymentSurvivingMonths,
-        noIncomeLifeSurvivingMonths
-    });
+        noIncomeLifeSurvivingMonths }, dealInput));
 };
 exports.createDeal = createDeal;
 //# sourceMappingURL=index.js.map

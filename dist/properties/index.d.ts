@@ -7,7 +7,7 @@ export interface Property extends PropertyInput {
 export interface PropertyInput {
     id: string;
     street: string;
-    apt: string;
+    apt?: string;
     city: string;
     state: string;
     zipCode: string;

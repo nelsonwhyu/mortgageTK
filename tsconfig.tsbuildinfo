@@ -82,8 +82,8 @@
         "affectsGlobalScope": true
       },
       "./src/properties/index.ts": {
-        "version": "57aaf2107b58b9230b4e86785d6c8ce56ec6e716e615a5dd5863b041f7c03941",
-        "signature": "b088d456aaf54748997e3620e4b5e2a952c478ed8ee1d137ed3a7ecc43dfc98d",
+        "version": "2b4746d8fbc0dfeb870e5eaf4316baaae848b68e31bd41835ef2ba9d74f7b74f",
+        "signature": "3b826bed9d93d066bc7ad61cdfe1448f828296576dbe6c69d1f616bec2c6dcfc",
         "affectsGlobalScope": false
       },
       "./src/mortgages/mortgage-program-config.ts": {
@@ -122,8 +122,8 @@
         "affectsGlobalScope": false
       },
       "./src/deals/index.ts": {
-        "version": "01c60f6041faf24b553c51671ceca72427a018488d7585e49c1b62d3e8612db0",
-        "signature": "13084bca22c62352730cd0c7633345e91425560ee63b99b208c146e80ec96277",
+        "version": "8895c88e043e2d0cb879082ac57a6819d0633ffa69ace0b562e7f6fe9047fa7b",
+        "signature": "1aa774662360c6cb5d641bc8ea3400e8f93ed449cb783f2c41ed6810006a156c",
         "affectsGlobalScope": false
       },
       "./src/index.ts": {
