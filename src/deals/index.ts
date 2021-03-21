@@ -123,7 +123,8 @@ export const createDeal = (dealInput: DealInput): Deal => {
             postDealCash,
             postDealCashPerEscrowInMonths,
             noIncomePaymentSurvivingMonths,
-            noIncomeLifeSurvivingMonths
+            noIncomeLifeSurvivingMonths,
+            ...dealInput
         }
     )
 }
