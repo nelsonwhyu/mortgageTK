@@ -122,8 +122,8 @@
         "affectsGlobalScope": false
       },
       "./src/deals/index.ts": {
-        "version": "8895c88e043e2d0cb879082ac57a6819d0633ffa69ace0b562e7f6fe9047fa7b",
-        "signature": "1aa774662360c6cb5d641bc8ea3400e8f93ed449cb783f2c41ed6810006a156c",
+        "version": "47a63368292b6d68614ecaf567a5f6bd0e91d6ecce981ca2890af75f383102e2",
+        "signature": "806b36d6c0acab5f11adba3bf2e7460809f2875e8ca3c296e703c731d87b58b9",
         "affectsGlobalScope": false
       },
       "./src/index.ts": {

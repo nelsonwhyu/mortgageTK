@@ -1,7 +1,7 @@
 import { Investor, OccupancyType } from '../investors';
 import { Mortgage, MortgageProgram } from '../mortgages';
 import { Property } from '../properties';
-export interface Deal {
+export interface Deal extends DealInput {
     mortgage: Mortgage;
     downPayment: number;
     monthlyPropertyExpense: number;
